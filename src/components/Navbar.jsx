@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import Navdropdown from "./Navdropdown";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -95,7 +96,8 @@ function Navbar() {
           )}
         </li>
       </ul>
-
+      <Navdropdown items={[ "testo1", "testo2", "testo3" ]} text={"nome dropdown"} />
+      <Navdropdown items={[ "testo4", "testo5", "testo6" ]} text={"nome dropdown 2"} />
       {/* ICONA CUORE DESTRA */}
       <span className="icon-heart">♡</span>
     </nav>
