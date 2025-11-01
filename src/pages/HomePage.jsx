@@ -1,0 +1,19 @@
+import SearchBar from "../components/Search/SearchBar.jsx";
+import ExploreSection from "../components/Card/ExploreSection.jsx";
+import HorizontalCards from "../components/Card/HorizontalCards.jsx";
+import ReviewsSection from "../components/Card/ReviewSection.jsx";
+import HeroWrapper from "../components/Hero/HeroWrapper.jsx";
+
+const HomePage = () => {
+  return (
+    <>
+      <SearchBar />
+      <HorizontalCards />
+      <HeroWrapper />
+      <ExploreSection />
+      <ReviewsSection />
+    </>
+  );
+};
+
+export default HomePage;

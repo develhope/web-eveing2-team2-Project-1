@@ -1,0 +1,129 @@
+:root {
+  --accent: #ff855b;
+  --color-text: #333;
+  --color-bg: #fff8f0;
+}
+.search-container {
+  text-align: center;
+  padding: 80px 40px;
+}
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  border: 1px solid #ccc;
+  background-color: var(--color-bg);
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+.search-results.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.search-results li {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--color-bg);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+.search-results li:last-child {
+  border-bottom: none;
+}
+.search-results li.clickable {
+  cursor: pointer;
+}
+.search-results li.clickable:hover {
+  background-color: #f8b097;
+  color: var(--color-bg);
+}
+.search-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f8b097;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  position: relative;
+}
+.search-bar .icon {
+  color: var(--color-text);
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f8b097;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: #f8b097;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  flex: 1;
+  width: 700px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+@media (max-width: 1024px) {
+  .search-container {
+    padding: 60px 30px;
+  }
+  .search-bar {
+    max-width: 500px;
+    padding: 15px 20px;
+  }
+  .search-bar input {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 15px;
+  }
+  .search-bar .icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 769px) {
+  .search-container {
+    padding: 40px 20px;
+  }
+  .search-bar {
+    max-width: 400px;
+    padding: 12px 15px;
+  }
+  .search-bar input {
+    font-size: 0.95rem;
+    margin-left: 10px;
+  }
+  .search-bar .icon {
+    font-size: 1rem;
+    margin-right: 8px;
+  }
+}
