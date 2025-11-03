@@ -8,6 +8,7 @@ body {
   padding: 0 2rem;
   height: 60px;
   position: relative;
+  gap: 2rem;
 }
 
 .logo {
@@ -16,16 +17,17 @@ body {
   margin-right: 1.5rem;
 }
 
-.nav-list {
+/*.nav-list {
   list-style: none;
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 0;
-}
+}*/
 
 .nav-item {
   position: relative;
+  list-style-type: none;
 }
 
 .nav-item button {
