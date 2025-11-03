@@ -1,31 +1,19 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-function Navdropdown ({items = [], text=""}) {
-    const [openMenu, setOpenMenu] = useState(null);
-      const [activeMenu, setActiveMenu] = useState(null);
+function Navdropdown ({items = [], text="", name, menuSet, active}) {
     
-    
-       const handleMenuClick = (menuName) => {
-        if (openMenu === menuName) {
-          setOpenMenu(null);
-          setActiveMenu(null);
-        } else {
-          setOpenMenu(menuName);
-          setActiveMenu(menuName);
-        }
-      };
 return(
 <li className="nav-item">
     <button
-        className={activeMenu === "modo" ? "active" : ""}
-        onClick={() => handleMenuClick("modo")}
+        className={active ? "active" : ""}
+        onClick={() => menuSet(name)}
     >
        {text}
     </button>
-        {openMenu === "modo" && (
+        {active && (
         <ul className="dropdown">
-            {items.map((item) => <li>{item}</li>)}
+            {items.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
         )}
 </li>

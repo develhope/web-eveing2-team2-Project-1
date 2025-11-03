@@ -3,16 +3,13 @@ import "./Navbar.css";
 import Navdropdown from "./Navdropdown";
 
 function Navbar() {
-  const [openMenu, setOpenMenu] = useState(null);
   const [activeMenu, setActiveMenu] = useState(null);
 
 
-   const handleMenuClick = (menuName) => {
-    if (openMenu === menuName) {
-      setOpenMenu(null);
-      setActiveMenu(null);
-    } else {
-      setOpenMenu(menuName);
+   const handleOpenMenuClick = (menuName) => {
+    if (activeMenu === menuName) {
+     setActiveMenu(null);
+    } else { 
       setActiveMenu(menuName);
     }
   };
@@ -23,10 +20,10 @@ function Navbar() {
       <img src="/logo.png" alt="logo" className="logo" />
 
       {/* VOCI DI MENU */}
-      <Navdropdown items={[ "Islanda", "Stati Uniti", "Africa", "Francia", "Spagna", "Portogallo", "Croazia", "Grecia"]} text={"Destinazioni"} />
-      <Navdropdown items={[ "Van", "Camper", "Moto", "Macchina", "Treno", "A piedi" ]} text={"Modo di viaggiare"} />
-      <Navdropdown items={[ "Avventura", "Relax", "Cultura" ]} text={"Tipo di vacanza"} />
-      <Navdropdown items={[ "Autunno", "Inverno", "Primavera", "Estate" ]} text={"Viaggia per stagione"} />
+      <Navdropdown items={[ "Islanda", "Stati Uniti", "Africa", "Francia", "Spagna", "Portogallo", "Croazia", "Grecia"]} text={"Destinazioni"} name ={"Destinazione"} menuSet={handleOpenMenuClick} active={activeMenu=="Destinazione" ? true : false}/>
+      <Navdropdown items={[ "Van", "Camper", "Moto", "Macchina", "Treno", "A piedi" ]} text={"Modo di viaggiare"} name ={"Viaggio"} menuSet={handleOpenMenuClick} active={activeMenu=="Viaggio" ? true : false}/>
+      <Navdropdown items={[ "Avventura", "Relax", "Cultura" ]} text={"Tipo di vacanza"} name ={"Tipo"} menuSet={handleOpenMenuClick} active={activeMenu=="Tipo" ? true : false}/>
+      <Navdropdown items={[ "Autunno", "Inverno", "Primavera", "Estate" ]} text={"Viaggia per stagione"} name ={"Stagione"} menuSet={handleOpenMenuClick} active={activeMenu=="Stagione" ? true : false}/>
       {/* ICONA CUORE DESTRA */}
       <span className="icon-heart">♡</span>
     </nav>
