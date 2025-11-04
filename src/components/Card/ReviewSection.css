@@ -3,7 +3,6 @@
   --color-text: #333;
   --color-bg: #fff8f0;
 }
-
 /*RECENSIONI*/
 .recensioni-section {
   position: relative;
@@ -12,6 +11,11 @@
   text-align: center;
   overflow: hidden;
   background: var(--color-bg);
+}
+.recensioni-section .card::before,
+.recensioni-section .label {
+  backdrop-filter: none;
+  background-color: transparent;
 }
 .wave-container {
   position: absolute;
@@ -54,7 +58,7 @@
   width: 220px;
   min-width: 220px;
   padding: 16px;
-  box-shadow: 0 4px 8px rgba(248, 176, 151, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 13px;
   text-align: left;
   display: flex;
