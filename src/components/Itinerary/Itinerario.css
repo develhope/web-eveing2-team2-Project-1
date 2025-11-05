@@ -1,0 +1,419 @@
+:root {
+  --container-w: 1100px;
+  --gap: 40px;
+  --accent: #ff855b;
+  --color-text: #333;
+  --color-bg: #fff8f0;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.itinerario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: var(--container-w);
+  margin: 40px auto;
+  gap: 20px;
+}
+.itinerario-header h1 {
+  margin: 0;
+  font-weight: 700;
+  flex: 1;
+  font-size: 2rem;
+}
+.preferiti-btn {
+  background-color: var(--color-bg);
+  color: var(--accent);
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.preferiti-btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 20px;
+  max-width: var(--container-w);
+  margin: 0 auto 30px;
+  align-items: stretch;
+}
+.info-card {
+  flex: 1 1 200px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 18px;
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  transition: tranform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-card:hover {
+  transform: translateY(-4px);
+}
+.info-card svg,
+.card i {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+.descrizione,
+.tour,
+.map-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gap);
+  padding: 0 20px;
+  max-width: var(--container-w);
+  margin: 60px auto;
+}
+.descrizione .text,
+.tour .text,
+.cosa-include h3 {
+  flex: 1;
+  text-align: left;
+}
+.side-image,
+.map-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.side-image img,
+.map-image img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.descrizione h2,
+.tour h2,
+.cosa-include h3 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.tour ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.tour li {
+  margin-bottom: 10px;
+}
+.galleria {
+  max-width: var(--container-w);
+  text-align: center;
+  padding: 0 20px;
+  margin: 60px auto;
+}
+.galleria h2 {
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+.panorami {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.panorami img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.map-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.map-box {
+  flex: 2;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+.cosa-include {
+  flex: 1;
+  background-color: var(--color-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.cosa-include ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cosa-include li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cosa-include i {
+  color: var(--accent);
+}
+.itinerario-giorni {
+  max-width: var(--container-w);
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.giorni-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.giorni-tabs .tab {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background-color: var(--color-bg);
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--accent);
+  font-weight: 600;
+}
+.giorni-tabs .tab.attivo,
+.giorni-tabs .tab:hover {
+  background: var(--accent);
+  color: white;
+}
+.attivita-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: var(--color-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+.attivita-card img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.attivita-card .text h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+@media (max-width: 1024px) {
+  .attivita-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .attivita-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .panorami {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-items: center;
+    gap: 12px;
+  }
+  .panorami img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .map-container {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .map-box {
+    flex: 2;
+    max-width: 65%;
+    height: 320px;
+  }
+  .cosa-include {
+    flex: 1;
+    max-width: 30%;
+    text-align: left;
+  }
+  .itinerario-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .itinerario-header h1 {
+    font-size: 1.2rem;
+    flex: 1;
+  }
+  .preferiti-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    flex: 0 0 auto;
+  }
+  .giorni-tabs {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .giorni-tabs .tab {
+    flex: 1 1 calc(50% - 6px);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .descrizione {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .descrizione .text,
+  .side-image {
+    flex: 1;
+  }
+  .itinerario-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .itinerario-header h1 {
+    font-size: 1.2rem;
+    flex: 1;
+  }
+  .preferiti-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    flex: 0 0 auto;
+  }
+  .giorni-tabs {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .giorni-tabs .tab {
+    flex: 1 1 calc(50%-6px);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .map-container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .map-box {
+    flex: 2;
+    height: auto;
+  }
+  .cosa-include {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}
+@media (max-width: 480px) {
+  .map-container {
+    flex-direction: row;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .map-box,
+  .cosa-include {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 0.65rem;
+    padding: 8px;
+  }
+  .map-box iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .cosa-include {
+    padding: 10px;
+  }
+  .itinerario-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .itinerario-header h1 {
+    font-size: 1rem;
+    word-wrap: break-word;
+    flex: 1;
+  }
+  .preferiti-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  .descrizione {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .descrizione .text,
+  .side-image {
+    width: 100%;
+  }
+  .side-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .descrizione .text {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .giorni-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .giorni-tabs .tab {
+    flex: 1 1 45%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}

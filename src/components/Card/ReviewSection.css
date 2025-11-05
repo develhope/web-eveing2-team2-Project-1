@@ -1,0 +1,154 @@
+:root {
+  --accent: #ff855b;
+  --color-text: #333;
+  --color-bg: #fff8f0;
+}
+/*RECENSIONI*/
+.recensioni-section {
+  position: relative;
+  padding: 60px 20px 150px;
+  color: var(--color-text);
+  text-align: center;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+.recensioni-section .card::before,
+.recensioni-section .label {
+  backdrop-filter: none;
+  background-color: transparent;
+}
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 0;
+  pointer-events: none;
+}
+.wave-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.recensioni-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.recensioni-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.recensioni-container::-webkit-scrollbar {
+  display: none;
+}
+.recensione-box {
+  background-color: var(--color-bg);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  width: 220px;
+  min-width: 220px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-text);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+  overflow: visible;
+  min-height: 220px;
+}
+.recensione-box:hover {
+  transform: translateY(-4px);
+}
+.user-icon {
+  font-size: 1.2rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.stars {
+  color: gold;
+  font-size: 14px;
+  margin-right: 2px;
+}
+.author {
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--color-text);
+  margin-top: auto;
+}
+@media (min-width: 1024px) {
+  .recensioni-container {
+    gap: 20px;
+  }
+  .recensione-box {
+    flex: 0 0 220px;
+  }
+  .user-icon {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .recensioni-container {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .recensioni-container::-webkit-scrollbar {
+    display: none;
+  }
+  .recensione-box {
+    flex: 0 0 200px;
+    min-width: 200px;
+  }
+  .user-icon {
+    font-size: 1.1rem;
+  }
+  .card {
+    height: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .recensione-box {
+    min-width: 100%;
+    margin: 0 auto;
+    scroll-snap-align: center;
+  }
+  .recensioni-container {
+    scroll-padding: 0 10%;
+    scroll-behavior: smooth;
+  }
+  .user-icon {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .recensioni-container {
+    display: block;
+    overflow-x: visible;
+    padding: 0 10px;
+    scroll-padding: 0;
+  }
+  .recensione-box {
+    width: 100%;
+    margin: 0 auto 20px;
+    flex-shrink: 0;
+    scroll-snap-align: none;
+  }
+}
