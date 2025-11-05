@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+}
+.navbar {
+  background-color: #ff7a50;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  height: 60px;
+  position: relative;
+  gap: 2rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 1.5rem;
+}
+
+/*.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}*/
+
+.nav-item {
+  position: relative;
+  list-style-type: none;
+}
+
+.nav-item button {
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-item button.active {
+  color: white;
+}
+
+/* MENU A TENDINA */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff3ec;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 10;
+}
+
+/* elementi menu a tendina*/
+.dropdown li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #ffe1d3;
+}
+
+/* ICONA CUORE */
+.icon-heart {
+  margin-left: auto;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
