@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import Navdropdown from "./Navdropdown";
+import Navdropdown from "./Navdropdown"; 
+import LoginDropdown from "./Autenticazione/LoginDropdown";
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -26,6 +27,7 @@ function Navbar() {
       <Navdropdown items={[ "Autunno", "Inverno", "Primavera", "Estate" ]} text={"Viaggia per stagione"} name ={"Stagione"} menuSet={handleOpenMenuClick} active={activeMenu=="Stagione" ? true : false}/>
       {/* ICONA CUORE DESTRA */}
       <span className="icon-heart">♡</span>
+       <LoginDropdown />
     </nav>
   );
 }
