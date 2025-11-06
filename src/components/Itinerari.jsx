@@ -1,4 +1,3 @@
-import React from "react";
 import "./Itinerari.css";
 import van from "../assets/van.png";
 import apiedi from "../assets/apiedi.png";

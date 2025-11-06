@@ -3,31 +3,6 @@
   --color-text: #333;
   --color-bg: #fff8f0;
 }
-/*PER NAVBAR*/
-.navbar {
-  padding: 1rem 2rem;
-  background-color: var(--accent);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-}
-.nav-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  color: var(--color-text);
-  justify-content: flex-end;
-}
-.heart-icon,
-.user-icon-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
 /*LOGIN DROPDOWN*/
 .dropdown {
   position: absolute;
