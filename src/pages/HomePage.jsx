@@ -3,10 +3,12 @@ import ExploreSection from "../components/Card/ExploreSection.jsx";
 import HorizontalCards from "../components/Card/HorizontalCards.jsx";
 import ReviewsSection from "../components/Card/ReviewSection.jsx";
 import HeroWrapper from "../components/Hero/HeroWrapper.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 const HomePage = () => {
   return (
     <>
+      <Navbar />
       <SearchBar />
       <HorizontalCards />
       <HeroWrapper />

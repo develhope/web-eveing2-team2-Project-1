@@ -14,6 +14,7 @@ import { LiaHeartSolid } from "react-icons/lia";
 import { IoHeartOutline } from "react-icons/io5";
 import "./Itinerario.css";
 import "../Card/Card.css";
+import Navbar from "../Navbar";
 
 const infoCards = [
   { icon: <FaClock />, label: "5 giorni" },
@@ -98,6 +99,7 @@ const Itinerario = () => {
 
   return (
     <div>
+      <Navbar />
       <Hero image={heroData.image} alt={heroData.title} />
 
       <section className="itinerario-header">

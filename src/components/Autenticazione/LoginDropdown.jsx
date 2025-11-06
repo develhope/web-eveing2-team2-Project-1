@@ -33,9 +33,10 @@ export default function LoginDropdown() {
 
   return (
     <div className="nav-icons">
-      <HeartIcon />
+      <HeartIcon className="icon" />
+
       <div className="user-login-container" ref={dropdownRef}>
-        <UserIcon onClick={toggleDropdown} />
+        <UserIcon className="icon" onClick={toggleDropdown} />
 
         <div className={`dropdown ${isOpen ? "show" : "hide"}`}>
           <h3>Login</h3>
