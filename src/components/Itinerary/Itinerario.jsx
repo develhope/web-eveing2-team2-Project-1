@@ -14,7 +14,8 @@ import { LiaHeartSolid } from "react-icons/lia";
 import { IoHeartOutline } from "react-icons/io5";
 import "./Itinerario.css";
 import "../Card/Card.css";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const infoCards = [
   { icon: <FaClock />, label: "5 giorni" },
@@ -206,6 +207,39 @@ const Itinerario = () => {
           </ul>
         </div>
       </div>
+
+      <div className="tour">
+        <div className="text">
+          <h2>La storia di Amalfi</h2>
+          <p>
+            Amalfi, una delle antiche repubbliche marinare d’Italia, vanta una
+            storia millenaria fatta di navigazione, commercio e arte. Tra l’XI e
+            il XIII secolo divenne un importante centro mediterraneo, famoso per
+            la sua flotta e i mercanti coraggiosi.
+          </p>
+          <p>
+            Il Duomo di Sant’Andrea, con le sue influenze arabe e normanne,
+            domina il centro storico, mentre vicoli e piazze raccontano storie
+            di marinai e mercanti. La leggenda narra che i marinai portassero
+            con sé reliquie del Santo Patrono per protezione durante le
+            tempeste.
+          </p>
+          <p>
+            Passeggiare ad Amalfi significa vivere un mix unico di storia,
+            tradizione marittima e panorami mozzafiato sulla Costiera.
+          </p>
+          <p>
+            Ancora oggi, Amalfi conserva il fascino di un tempo: tra vicoli,
+            botteghe e antichi arsenali, il passato si respira in ogni angolo.
+            La celebre carta amalfitana e le tradizioni artigiane raccontano una
+            storia che continua a vivere.
+          </p>
+        </div>
+        <div className="side-image">
+          <img src="/immagini/mappatouramalfi.jpg" alt="Mappa tour Amalfi" />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };

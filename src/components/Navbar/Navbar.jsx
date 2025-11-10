@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.css";
 import Navdropdown from "./Navdropdown";
-import LoginDropdown from "./Autenticazione/LoginDropdown";
+import LoginDropdown from "../Autenticazione/LoginDropdown";
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -17,7 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="left-section">
-        <img src="/logo.png" alt="logo" className="logo" />
+        <img src="/immagini/logo.png" alt="logo" className="logo" />
 
         <div className="nav-menu">
           <Navdropdown
