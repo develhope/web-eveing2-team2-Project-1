@@ -7,6 +7,8 @@ const horizontalCards = [
   { image: "/immagini/states.jpg", alt: "Stati Uniti", label: "Stati Uniti" },
   { image: "/immagini/island.jpg", alt: "Islanda", label: "Islanda" },
   { image: "/immagini/europe.jpg", alt: "Est Europa", label: "Est Europa" },
+  { image: "/immagini/england.jpg", alt: "Inghilterra", label: "Inghilterra" },
+  { image: "/immagini/africa.jpg", alt: "Africa", label: "Africa" },
 ];
 
 const HorizontalCards = () => {
