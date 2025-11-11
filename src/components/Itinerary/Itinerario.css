@@ -236,6 +236,24 @@ body {
   font-size: 1.1rem;
   color: var(--color-text);
 }
+.tour {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+}
+.tour .text {
+  flex: 1;
+}
+.tour .side-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tour .side-image img {
+  max-width: 100%;
+  width: auto;
+}
 @media (max-width: 1024px) {
   .attivita-card {
     flex-direction: column;
@@ -301,7 +319,6 @@ body {
     text-align: center;
   }
 }
-
 @media (max-width: 768px) {
   .descrizione {
     flex-direction: row;
@@ -348,6 +365,22 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
+  }
+  .tour {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .tour .side-image {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .tour .side-image img {
+    height: auto;
+    width: 100%;
+  }
+  .tour .text {
+    width: 90%;
   }
 }
 @media (max-width: 480px) {
@@ -417,14 +450,17 @@ body {
     padding: 6px 8px;
   }
   .tour {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .tour .side-image {
+    width: 100%;
+    margin-bottom: 1rem;
   }
   .tour .side-image img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    max-width: 400px;
   }
 }
