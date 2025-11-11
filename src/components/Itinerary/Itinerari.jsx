@@ -1,8 +1,8 @@
 import "./Itinerari.css";
-import van from "../assets/van.png";
-import apiedi from "../assets/apiedi.png";
-import moto from "../assets/moto.png";
-import treno from "../assets/treno.png";
+import van from "/immagini/van.png";
+import apiedi from "/immagini/apiedi.png";
+import moto from "/immagini/moto.png";
+import treno from "/immagini/treno.png";
 
 const itinerari = [
   { icon: van, label: "Itinerari in van" },
