@@ -81,7 +81,7 @@ body {
   background-color: #ffe1d3;
 }
 
-/* --- HAMBURGER ICON --- */
+/* icona hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -108,7 +108,7 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* --- MEDIA QUERY per dispositivi mobili --- */
+/*responsive */
 @media screen and (max-width: 900px) {
   .nav-menu {
     display: none;

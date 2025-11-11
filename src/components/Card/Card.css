@@ -52,6 +52,8 @@
   padding: 0 10px;
 }
 .card {
+  flex: 0 0 25%;
+  min-width: 250px;
   position: relative;
   width: 30%;
   overflow: hidden;
@@ -114,6 +116,73 @@
   border-radius: 0;
   z-index: 2;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+/* Frecce */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 122, 80, 0.9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.arrow:hover {
+  background-color: #ff7a50;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+  left: 10px;
+  background: rgba(0, 123, 123, 0.7);
+  width: 48px;
+  height: 48px;
+}
+
+.arrow.right {
+  right: 10px;
+  background: rgba(0, 123, 123, 0.7);
+  width: 48px;
+  height: 48px;
+}
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 16px;
+  margin: auto;
+  padding: 30px;
+  overflow: hidden;
+}
+
+/* Contenitore scrollabile */
+.carousel-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 90%;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.card-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 @media (max-width: 1024px) {
   .hero-text h1 {
