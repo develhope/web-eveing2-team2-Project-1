@@ -5,6 +5,7 @@ import LoginDropdown from "../Autenticazione/LoginDropdown";
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false); // <--- nuovo stato
 
   const handleOpenMenuClick = (menuName) => {
     if (activeMenu === menuName) {
@@ -14,12 +15,24 @@ function Navbar() {
     }
   };
 
+  const toggleMobileMenu = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="left-section">
         <img src="/immagini/logo.png" alt="logo" className="logo" />
 
-        <div className="nav-menu">
+        {/* HAMBURGER ICON visibile solo su mobile */}
+        <div className="hamburger" onClick={toggleMobileMenu}>
+          <span className={mobileOpen ? "bar open" : "bar"}></span>
+          <span className={mobileOpen ? "bar open" : "bar"}></span>
+          <span className={mobileOpen ? "bar open" : "bar"}></span>
+        </div>
+
+        {/* MENU PRINCIPALE */}
+        <div className={`nav-menu ${mobileOpen ? "active" : ""}`}>
           <Navdropdown
             items={[
               "Islanda",

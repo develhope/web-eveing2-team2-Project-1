@@ -80,3 +80,58 @@ body {
 .navdropdown-menu li:hover {
   background-color: #ffe1d3;
 }
+
+/* icona hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/*responsive */
+@media screen and (max-width: 900px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff7a50;
+    padding: 1rem 0;
+    z-index: 100;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu .navdropdown {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-top: 10px;
+  }
+}
